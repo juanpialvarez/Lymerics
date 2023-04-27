@@ -17,14 +17,16 @@ interface Props {
 const CarouselComponent: React.FC<Props> = ({ data }: Props) => {
   return (
     <CarouselProvider
-      naturalSlideWidth={2}
+      naturalSlideWidth={1.5}
       naturalSlideHeight={1}
       totalSlides={data.length}
       visibleSlides={3}
       className='carousel'
     >
-      <ButtonBack className='ui button'>Back</ButtonBack>
-      <ButtonNext className='ui button'>Next</ButtonNext>
+      <div className='carousel__buttons'>
+        <ButtonBack className='ui button btn-back'>Back</ButtonBack>
+        <ButtonNext className='ui button btn-forward'>Next</ButtonNext>
+      </div>
       <Slider>
         {data.map((story) => (
           <Slide index={story.id}>

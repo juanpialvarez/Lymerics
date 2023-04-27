@@ -28,6 +28,18 @@
   color: #61dafb;
 }
 
+.carousel__buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.logo__top {
+  height: 50px;
+  width: 50px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -12,7 +12,7 @@ const Main: React.FC = () => {
         <Grid.Column width={3}>
           <Image
             src='../../../public/dummy_60x60_000000_e590de.png'
-            size='small'
+            className='logo__top'
           />
         </Grid.Column>
         <Grid.Column width={10}></Grid.Column>
