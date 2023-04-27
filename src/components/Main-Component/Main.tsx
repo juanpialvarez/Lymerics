@@ -31,7 +31,7 @@ const Main: React.FC = () => {
         </Segment>
       </Grid.Row>
 
-      <Grid.Row style={{ height: "100px" }}>
+      <Grid.Row>
         <Grid.Column width={16}></Grid.Column>
       </Grid.Row>
     </Grid>

@@ -28,7 +28,7 @@ const CarouselComponent: React.FC<Props> = ({ data }: Props) => {
   return (
     <CarouselProvider
       naturalSlideWidth={1}
-      naturalSlideHeight={1}
+      naturalSlideHeight={1.25}
       totalSlides={data.length}
       visibleSlides={
         windowWidth > 950 ? 5 : windowWidth <= 950 && windowWidth > 750 ? 4 : 3
