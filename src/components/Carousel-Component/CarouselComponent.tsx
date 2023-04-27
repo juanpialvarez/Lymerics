@@ -28,8 +28,8 @@ const CarouselComponent: React.FC<Props> = ({ data }: Props) => {
         <ButtonNext className='ui button btn-forward'>Next</ButtonNext>
       </div>
       <Slider>
-        {data.map((story) => (
-          <Slide index={story.id}>
+        {data.map((story, index) => (
+          <Slide index={index}>
             <StoryCard story={story} />
           </Slide>
         ))}
