@@ -10,7 +10,9 @@ const SelectionView: React.FC<Props> = ({
   displayWrite,
   setDisplayWrite,
 }: Props) => {
-  const [displayDivider, setDisplayDivider] = useState<boolean>(false);
+  const [displayDivider, setDisplayDivider] = useState<boolean>(
+    window.innerWidth <= 770 ? false : true
+  );
 
   useEffect(() => {
     function handleResize() {
