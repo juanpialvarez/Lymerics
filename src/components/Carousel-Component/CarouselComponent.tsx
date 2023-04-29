@@ -4,12 +4,12 @@ import {
   Slide,
   ButtonBack,
   ButtonNext,
-} from "pure-react-carousel";
-import { Icon } from "semantic-ui-react";
-import React, { useEffect, useState } from "react";
-import { Story } from "../../story";
-import StoryCard from "../Story-Card-Component/SotryCard";
-import "pure-react-carousel/dist/react-carousel.es.css";
+} from 'pure-react-carousel';
+import { Icon } from 'semantic-ui-react';
+import React, { useEffect, useState } from 'react';
+import { Story } from '../../story';
+import StoryCard from '../Story-Card-Component/SotryCard';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 interface Props {
   data: Story[];
@@ -22,7 +22,7 @@ const CarouselComponent: React.FC<Props> = ({ data }: Props) => {
     function handleDisplay() {
       setWindowWidth(window.innerWidth);
     }
-    window.addEventListener("resize", handleDisplay);
+    window.addEventListener('resize', handleDisplay);
   });
 
   return (

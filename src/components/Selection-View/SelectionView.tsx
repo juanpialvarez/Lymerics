@@ -1,7 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { Grid, Button, Segment, Divider } from "semantic-ui-react";
+import React, { useEffect, useState } from 'react';
+import { Grid, Button, Segment, Divider } from 'semantic-ui-react';
 
-const SelectionView: React.FC = () => {
+interface Props {
+  displayWrite: boolean;
+  setDisplayWrite: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const SelectionView: React.FC<Props> = ({
+  displayWrite,
+  setDisplayWrite,
+}: Props) => {
   const [displayDivider, setDisplayDivider] = useState<boolean>(false);
 
   useEffect(() => {
@@ -12,7 +20,7 @@ const SelectionView: React.FC = () => {
         setDisplayDivider(true);
       }
     }
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
   });
 
   return (
@@ -28,7 +36,14 @@ const SelectionView: React.FC = () => {
         </Grid>
       ) : (
         <div>
-          <Button content='Write' icon='write' size='big' />
+          <Button
+            content='Write'
+            icon='write'
+            size='big'
+            onClick={() => {
+              setDisplayWrite(true);
+            }}
+          />
           <Divider horizontal>Or</Divider>
           <Button content='Edit' icon='edit' size='big' />
         </div>
